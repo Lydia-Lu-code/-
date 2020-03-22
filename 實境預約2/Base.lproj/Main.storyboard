@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--實境介紹-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="實境預約2" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,7 +23,7 @@
                                 <rect key="frame" x="97" y="368" width="181" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
-                                <state key="normal" title="實境預約">
+                                <state key="normal" title="實境介紹">
                                     <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.94333755969999999" green="0.94160570330000004" blue="0.81120829579999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -35,7 +35,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="NzK-oA-XXG"/>
+                    <navigationItem key="navigationItem" title="實境介紹" id="NzK-oA-XXG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -169,11 +169,11 @@
             </objects>
             <point key="canvasLocation" x="8637.6000000000004" y="115.59220389805098"/>
         </scene>
-        <!--Item-->
+        <!--實境介紹-->
         <scene sceneID="Wtu-ns-c5x">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BYF-V1-zY5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="vOf-sr-gjd"/>
+                    <tabBarItem key="tabBarItem" title="實境介紹" image="book.circle" catalog="system" badgeValue="NEW" id="vOf-sr-gjd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NiH-Nr-Pxv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -188,25 +188,110 @@
             </objects>
             <point key="canvasLocation" x="4376.8000000000002" y="115.59220389805098"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--介紹-->
         <scene sceneID="2XR-xP-r67">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="t4z-ZU-lN8" sceneMemberID="viewController">
+                <tabBarController title="介紹" automaticallyAdjustsScrollViewInsets="NO" id="t4z-ZU-lN8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ubh-t3-LL7">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYF-V1-zY5" kind="relationship" relationship="viewControllers" id="FwY-62-old"/>
+                        <segue destination="jCe-W6-ka8" kind="relationship" relationship="viewControllers" id="gax-Cj-yNZ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2o6-9a-Rve" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3437.5999999999999" y="115.59220389805098"/>
         </scene>
-        <!--Table View Controller-->
+        <!--View Controller-->
+        <scene sceneID="Bbj-06-UQy">
+            <objects>
+                <viewController id="57N-XE-8ZZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="46q-1y-gMc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="封面2" translatesAutoresizingMaskIntoConstraints="NO" id="GOh-sM-78Y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="Qgg-kn-pfF">
+                                <rect key="frame" x="0.0" y="72" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <locale key="locale" localeIdentifier="zh_TW"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="人數" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SI-bp-Cdc">
+                                <rect key="frame" x="67" y="323" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5p-8e-LTc">
+                                <rect key="frame" x="281" y="323" width="26" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ze4-dY-EJs">
+                                <rect key="frame" x="67" y="377" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HGC-vq-pop">
+                                <rect key="frame" x="143" y="314" width="130" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctm-yG-vqx">
+                                <rect key="frame" x="281" y="377" width="26" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Oo-Fd-ubU">
+                                <rect key="frame" x="143" y="368" width="130" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8F5-UC-I0o">
+                                <rect key="frame" x="103" y="464" width="51" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="確定"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5B-fO-JV5">
+                                <rect key="frame" x="223" y="464" width="51" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="取消"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="OEd-ZJ-dCU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="l6O-fT-zBa"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SEl-vn-rfb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fjB-qL-QOI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5316" y="941.37931034482767"/>
+        </scene>
+        <!--台北場-->
         <scene sceneID="E1i-WG-edx">
             <objects>
                 <tableViewController id="mcX-IV-yPC" sceneMemberID="viewController">
@@ -217,11 +302,11 @@
                         <sections>
                             <tableViewSection headerTitle="台北場" id="5lb-v9-gs8" userLabel="台北場">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Meq-Xi-XWZ">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="179"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="170" rowHeight="180" id="Meq-Xi-XWZ">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Meq-Xi-XWZ" id="cil-M3-Ail">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="179"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NsM-pD-PY8">
@@ -298,13 +383,13 @@
                                                 </scrollView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Jiw-Sv-owY">
-                                        <rect key="frame" x="0.0" y="207" width="375" height="179"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="180" id="Jiw-Sv-owY">
+                                        <rect key="frame" x="0.0" y="208" width="375" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jiw-Sv-owY" id="1SQ-C5-ifg">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="179"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvP-N7-Bba">
@@ -383,11 +468,11 @@
                                         </tableViewCellContentView>
                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="O9c-wQ-Yxi">
-                                        <rect key="frame" x="0.0" y="386" width="375" height="179"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="180" id="O9c-wQ-Yxi">
+                                        <rect key="frame" x="0.0" y="388" width="375" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O9c-wQ-Yxi" id="8Vn-TK-nXy">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="179"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zG2-xY-HNZ">
@@ -466,11 +551,11 @@
                                         </tableViewCellContentView>
                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="jg5-J7-clz">
-                                        <rect key="frame" x="0.0" y="565" width="375" height="179"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="180" id="jg5-J7-clz">
+                                        <rect key="frame" x="0.0" y="568" width="375" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jg5-J7-clz" id="bb2-e5-40T">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="179"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OO0-j3-33R">
@@ -549,17 +634,17 @@
                                         </tableViewCellContentView>
                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="2al-3d-KOd">
-                                        <rect key="frame" x="0.0" y="744" width="375" height="179"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="180" id="2al-3d-KOd">
+                                        <rect key="frame" x="0.0" y="748" width="375" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2al-3d-KOd" id="SSg-zk-CTE">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="179"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0HN-9Q-Xdu">
                                                     <rect key="frame" x="16" y="0.0" width="332" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="神不在場工作室"/>
+                                                    <state key="normal" title="玩笑實驗室"/>
                                                 </button>
                                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xeh-I6-tqe">
                                                     <rect key="frame" x="0.0" y="28" width="375" height="152"/>
@@ -569,42 +654,51 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="1200" height="160"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="神不在場工作室-" translatesAutoresizingMaskIntoConstraints="NO" id="aB0-qA-B8M">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="玩笑實驗室-" translatesAutoresizingMaskIntoConstraints="NO" id="aB0-qA-B8M">
                                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="160"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 </imageView>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="莎士比亞的邀請" translatesAutoresizingMaskIntoConstraints="NO" id="bYK-Iz-2Op">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="主題1 迴異路" translatesAutoresizingMaskIntoConstraints="NO" id="bYK-Iz-2Op" userLabel="迴異路">
                                                                     <rect key="frame" x="300" y="0.0" width="300" height="160"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 </imageView>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="浮士德家的後院" translatesAutoresizingMaskIntoConstraints="NO" id="KBY-Go-3GH">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="主題2 掘" translatesAutoresizingMaskIntoConstraints="NO" id="KBY-Go-3GH" userLabel="掘">
                                                                     <rect key="frame" x="600" y="0.0" width="300" height="160"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 </imageView>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="X伯爵的委託" translatesAutoresizingMaskIntoConstraints="NO" id="VeC-zd-Fr2">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="主題3 醒" translatesAutoresizingMaskIntoConstraints="NO" id="VeC-zd-Fr2" userLabel="醒">
                                                                     <rect key="frame" x="900" y="0.0" width="300" height="160"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 </imageView>
-                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKG-6N-O4a">
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKG-6N-O4a" userLabel="迴異路">
                                                                     <rect key="frame" x="300" y="0.0" width="300" height="160"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <state key="normal" title="莎士比亞的邀請">
                                                                         <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </state>
+                                                                    <connections>
+                                                                        <segue destination="qcl-yl-yA2" kind="show" id="4oC-la-u2T"/>
+                                                                    </connections>
                                                                 </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iZ-58-LO7">
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iZ-58-LO7" userLabel="掘">
                                                                     <rect key="frame" x="600" y="0.0" width="300" height="160"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <state key="normal" title="浮士德家的後院">
                                                                         <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </state>
+                                                                    <connections>
+                                                                        <segue destination="Pfm-If-hp2" kind="show" id="K5S-cc-tA0"/>
+                                                                    </connections>
                                                                 </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1GY-uC-ZAn">
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1GY-uC-ZAn" userLabel="醒">
                                                                     <rect key="frame" x="900" y="0.0" width="300" height="160"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <state key="normal" title="X伯爵的委託">
                                                                         <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </state>
+                                                                    <connections>
+                                                                        <segue destination="6q2-T0-I3s" kind="show" id="leC-xH-gtZ"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -631,11 +725,11 @@
                             <outlet property="delegate" destination="mcX-IV-yPC" id="W1e-5C-2Qx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="eeR-0f-io5"/>
+                    <navigationItem key="navigationItem" title="台北場" id="eeR-0f-io5"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bw7-7r-9tP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6175" y="803"/>
+            <point key="canvasLocation" x="7112.8000000000002" y="802.848575712144"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="G2N-2p-7Z0">
@@ -759,7 +853,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mJf-tc-hje" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7989.6000000000004" y="802.848575712144"/>
+            <point key="canvasLocation" x="8928.7999999999993" y="802.848575712144"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="RG3-Wx-486">
@@ -773,10 +867,10 @@
                                 <rect key="frame" x="16" y="376" width="343" height="255"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">「觀落陰」是道教的一種觀靈術，透過作法者的指引，讓活著的人魂魄出體到陰曹地府走一遭。 從查看運勢的探元辰宮，到與往生親友相見皆為觀靈目的。 「人有三魂七魄 , 現在出去一魂來找你想找的人......」 你認為值得嗎？  因故和女兒佩佩分隔兩地的美惠接到了佩佩失蹤的消息，馬上趕回夫家的老宅。就在那個房間裡，美惠彷彿看到佩佩的身影，正如過世的婆婆所說－－即使關上了門，仍恍似聽見佩佩在閣樓與好友一同玩耍的聲音。「觀落陰」是美惠的最後希望，她想知道女兒的下落，解開心中未解之謎；她需要去一趟「陰間」。
+                                <string key="text">「觀落陰」是道教的一種觀靈術，透過作法者的指引，讓活著的人魂魄出體到陰曹地府走一遭。 從查看運勢的探元辰宮，到與往生親友相見皆為觀靈目的。 「人有三魂七魄 , 現在出去一魂來找你想找的人......」 你認為值得嗎？  因故和女兒佩佩分隔兩地的美惠接到了佩佩失蹤的消息，馬上趕回夫家的老宅。就在那個房間裡，美惠彷彿看到佩佩的身影，正如過世的婆婆所說－－即使關上了門，仍恍似聽見佩佩在閣樓與好友一同玩耍的聲音。「觀落陰」是美惠的最後希望，她想知道女兒的下落，解開心中未解之謎；她需要去一趟「陰間」。
 
 然而美惠並不知道，「陰間」也正等待著她的到來……
-</mutableString>
+</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13.5"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -817,7 +911,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Rn-zp-gwU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9285.6000000000004" y="802.848575712144"/>
+            <point key="canvasLocation" x="10224.799999999999" y="802.848575712144"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="v4v-Co-70A">
@@ -882,7 +976,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mT6-YV-roz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8637.6000000000004" y="802.848575712144"/>
+            <point key="canvasLocation" x="9576.7999999999993" y="802.848575712144"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wu6-Nc-WXm">
@@ -946,7 +1040,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGu-5x-Eeb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7990" y="1477"/>
+            <point key="canvasLocation" x="8928.7999999999993" y="1476.6116941529237"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pEe-tN-evU">
@@ -1011,7 +1105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1m-ql-7Aw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8638" y="1477"/>
+            <point key="canvasLocation" x="9576.7999999999993" y="1476.6116941529237"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="m2v-QE-itH">
@@ -1074,7 +1168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wpn-1u-aed" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9287" y="1477"/>
+            <point key="canvasLocation" x="10224.799999999999" y="1476.6116941529237"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="vKT-Qi-TyV">
@@ -1256,18 +1350,223 @@
             </objects>
             <point key="canvasLocation" x="9286" y="2158"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="lIv-Xh-tkV">
+            <objects>
+                <viewController id="qcl-yl-yA2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dP9-VU-uXG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wgN-3B-AFo">
+                                <rect key="frame" x="16" y="376" width="343" height="255"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">「憶空門關閉，記憶連結中斷。」
+
+博士使用最新儀器進入記憶探索，卻因無法在時間內回來而昏迷。博士出發前留下字條「如果我沒回來，表示實驗失敗，別來救我，可能很危險。」儘管如此，研究人員仍前往調查，卻也發現博士不為人知的秘密⋯
+
+關於迴異路...
+有些事情要先讓你們知道
+我們是誰？
+你們是博士的助理，博士在憶空門內失蹤，需要你們去了解狀況。
+</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13.5"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="主題1 迴異路" translatesAutoresizingMaskIntoConstraints="NO" id="7UL-gl-qmD">
+                                <rect key="frame" x="0.0" y="93" width="375" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6hx-IJ-UvJ">
+                                <rect key="frame" x="0.0" y="305" width="375" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ojN-8U-Kxb">
+                                <rect key="frame" x="16" y="308" width="343" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">難易度：★★★
+活動人數：2~8人
+活動時間：80分鐘(含解說共約30分鐘)</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="迴異路" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="27l-lK-fHm">
+                                <rect key="frame" x="16" y="60" width="343" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="RCL-5T-Rly"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KPW-Hh-jFa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tIx-f4-oZf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7990" y="2843"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="SYZ-i3-E2r">
+            <objects>
+                <viewController id="6q2-T0-I3s" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HoW-tR-Xh0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="get-CE-z0O">
+                                <rect key="frame" x="16" y="376" width="343" height="255"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">深藏在天才博士Xavier宅邸的超級能量石Aroti引發了各界覬覦， 
+但博士設下的層層機關和陷阱卻讓所有潛入盜寶者全軍覆沒。 
+特務總部收到了兩份委託書皆要求不惜任何代價奪得能量石。
+
+你們將兵分兩路分頭前進，也藉此顯示誰才是菁英中的菁英！
+ 當然，獲勝的報酬會是很豐厚的 !</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13.5"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="主題3 醒" translatesAutoresizingMaskIntoConstraints="NO" id="N55-JM-nhr">
+                                <rect key="frame" x="0.0" y="93" width="375" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xSC-ft-u8K">
+                                <rect key="frame" x="0.0" y="305" width="375" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3mR-fM-J6U">
+                                <rect key="frame" x="16" y="308" width="343" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">難易度：★★★
+活動人數：5~12人
+活動時間：80分鐘(含解說共約30分鐘)</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="醒" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4KZ-qM-Zuu">
+                                <rect key="frame" x="16" y="60" width="343" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="mkG-kk-KZz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XQN-gD-NxQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NCn-fG-b5O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9286" y="2842"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pOe-Qx-moF">
+            <objects>
+                <viewController id="Pfm-If-hp2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gjh-fB-8Tx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="“身為秘密部門一員的各位，今日來到的是「埃及不具名神殿」你們需要尋找曾經協助調查的考古學家赫普米，設法取得他研究荷魯斯之眼的資料。  不過，神殿因過於老舊關係，目前入口已崩塌請儘快調查完畢，找其他出口離開神殿。”" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ih4-cd-gE0">
+                                <rect key="frame" x="16" y="376" width="343" height="255"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13.5"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="主題2 掘" translatesAutoresizingMaskIntoConstraints="NO" id="3j1-Dx-5oy">
+                                <rect key="frame" x="0.0" y="93" width="375" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P6u-fC-gcW">
+                                <rect key="frame" x="0.0" y="305" width="375" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gmr-vV-xhR">
+                                <rect key="frame" x="16" y="308" width="343" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">難易度：★★★
+活動人數：5~12人
+活動時間：80分鐘(含解說共約30分鐘)</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="掘" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pMZ-lh-I3n">
+                                <rect key="frame" x="16" y="60" width="343" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="aEc-Hg-iAR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2Qa-7m-V73"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GLW-nC-rUc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8638" y="2842"/>
+        </scene>
+        <!--時間預約-->
+        <scene sceneID="jOA-Vb-kvI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jCe-W6-ka8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="時間預約" selectedImage="calendar.circle" catalog="system" id="gDp-fE-mD8">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="032-8b-gTE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="57N-XE-8ZZ" kind="relationship" relationship="rootViewController" id="Td5-fG-Lz6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cgN-lk-9Mi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4377" y="943"/>
+        </scene>
     </scenes>
     <resources>
         <image name="4Fun-Base工作室-" width="500" height="235"/>
         <image name="Miss-Game工作室-" width="500" height="235"/>
         <image name="X伯爵的委託" width="600" height="338"/>
+        <image name="book.circle" catalog="system" width="64" height="60"/>
+        <image name="calendar.circle" catalog="system" width="64" height="60"/>
+        <image name="主題1 迴異路" width="214" height="300"/>
+        <image name="主題2 掘" width="214" height="300"/>
+        <image name="主題3 醒" width="214" height="300"/>
         <image name="奪寶令" width="900" height="296"/>
         <image name="密室逃脫封面" width="414" height="896"/>
+        <image name="封面2" width="414" height="896"/>
         <image name="怪盜的預告" width="750" height="263"/>
         <image name="放樂工作室-" width="500" height="235"/>
         <image name="永生劫 橫圖" width="272" height="203"/>
         <image name="流亡黯道上 永生之謎" width="770" height="428"/>
         <image name="浮士德家的後院" width="1114" height="615"/>
+        <image name="玩笑實驗室-" width="500" height="235"/>
         <image name="神不在場工作室-" width="500" height="235"/>
         <image name="稻荷之歌 橫圖" width="295" height="220"/>
         <image name="莎士比亞的邀請" width="720" height="405"/>
@@ -1276,4 +1575,7 @@
         <image name="逃出吸血古堡" width="600" height="334"/>
         <image name="鄉間小道 橫圖" width="295" height="220"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="OEd-ZJ-dCU"/>
+    </inferredMetricsTieBreakers>
 </document>
